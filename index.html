@@ -1,35 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title></title>
-  
+  <link rel="stylesheet" href="style.css">
+
+  <title>sneakers</title>
+
 </head>
+
 <body>
 
-  Collections
-  Men
-  Women
-  About
-  Contact
+  <div class="containerModal">
+    <div class="overlay" onclick="modalTrigger()"></div>
+    <div class="modal"></div>
+  </div>
 
-  Sneaker Company
+  <main>
 
-  Fall Limited Edition Sneakers
+    <nav>
 
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
+      <div>
 
-  $125.00
-  50%
-  $250.00
+        <img src="images/logo.svg" alt="">
+        <p><a href="#">Collections</a></p>
+        <p><a href="#">Men</a></p>
+        <p><a href="#">Women</a></p>
+        <p><a href="#">About</a></p>
+        <p><a href="#">Contact</a></p>
 
-  0
-  Add to cart
-  
+      </div>
+
+      <div>
+
+        <img src="images/icon-cart.svg" alt="#">
+        <img src="images/image-avatar.png" alt="#">
+
+      </div>
+
+    </nav>
+
+    <hr>
+
+    <article>
+
+      <div class="containerProductImg">
+
+        <img src="images/image-product-1.jpg" alt="">
+
+        <div class="imageSelect">
+
+          <img src="images/image-product-1-thumbnail.jpg" alt="">
+          <img src="images/image-product-2-thumbnail.jpg" alt="">
+          <img src="images/image-product-3-thumbnail.jpg" alt="">
+          <img src="images/image-product-4-thumbnail.jpg" alt="">
+
+        </div>
+
+      </div>
+
+      <div class="containerProductInfo">
+
+        <h2>Sneaker Company</h2>
+        <h3>Fall Limited Edition Sneakers</h3>
+        <p>These low-profile sneakers are your perfect casual wear companion. Featuring a
+          durable rubber outer sole, they'll withstand everything the weather can offer.</p>
+
+        <div id="reduction">
+
+          <span>$125.00</span>
+          <span>50%</span>
+          <span>$250.00</span>
+
+        </div>
+
+        <div class="containerAddProduct">
+
+          <div id="numberProduct">
+
+            <img src="images/icon-minus.svg" alt="">
+            <span>0</span>
+            <img src="images/icon-plus.svg" alt="">
+
+          </div>
+
+          <button><img src="images/icon-cart-copy.svg" alt="">Add to cart</button>
+
+        </div>
+
+      </div>
+
+    </article>
+
+  </main>
+
 </body>
+
 </html>

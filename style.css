@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;500;600;700&display=swap');
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+    text-decoration: none;
+}
+
+
+
+main {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* MODAL */
+div.containerModal {
+    visibility: hidden;
+}
+
+
+/* NAVIGATION */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+}
+
+nav div {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+nav div a {
+    color: gray;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+nav div p {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+nav div p:hover {
+    border-bottom: 3px solid orange;
+}
+
+nav div a:hover {
+    color: black;
+}
+
+nav div:first-child {
+    justify-content: space-between;
+}
+
+nav div:last-child {
+    justify-content: flex-end;
+    gap: 2em;
+}
+
+nav div:last-child img:first-child {
+    width: 3%;
+}
+
+nav div:last-child {
+    cursor: pointer;
+}
+
+nav div:last-child img:last-child {
+    width: 7%;
+    border-radius: 50%;
+}
+
+nav div:last-child img:last-child:hover {
+    border: 2px solid orange;
+}
+
+hr {
+    margin: 0 1em;
+    border: 1px solid rgba(214, 214, 214, 0.5);
+}
+
+/* ARTICLE */
+article {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5em;
+    gap: 5em;
+}
+
+article>* {
+    width: 50%;
+}
+
+article h2 {
+    text-transform: uppercase;
+    font-size: 1em;
+    letter-spacing: 0.2em;
+    color: orange;
+}
+
+article h3 {
+    font-size: 4em;
+}
+
+article img {
+    border-radius: 1em;
+}
+
+article>div>img {
+    width: 100%;
+}
+
+article div div.imageSelect {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 2em;
+}
+
+article div div.imageSelect img {
+    width: 20%;
+    cursor: pointer;
+}
+
+article .containerProductInfo {
+    display: flex;
+    flex-flow: column;
+    gap: 2em;
+}
+
+article .containerProductInfo p {
+    color: gray;
+    line-height: 2em;
+}
+
+article .containerProductInfo #reduction {
+    width: 40%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+article .containerProductInfo #reduction span {
+    width: 50%;
+}
+
+article .containerProductInfo #reduction span:first-child {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+article .containerProductInfo #reduction span:nth-child(2) {
+    color: orange;
+    background: rgb(252, 240, 227);
+    padding: 0.3em 0.5em;
+    width: fit-content;
+    border-radius: 0.5em;
+    font-weight: 700;
+}
+
+article .containerProductInfo #reduction span:last-child {
+    color: rgb(179, 179, 179);
+    text-decoration: line-through;
+    font-weight: 700;
+}
+
+article .containerAddProduct {
+    display: flex;
+    gap: 1em;
+    width: 100%;
+}
+
+article .containerAddProduct div#numberProduct {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 1em;
+    width: 25%;
+    background: rgba(233, 233, 233, 0.301);
+    height: 6vh;
+}
+
+article .containerAddProduct div#numberProduct img:hover {
+    cursor: pointer;
+}
+
+article .containerAddProduct button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    width: 40%;
+    border: none;
+    border-radius: 1em;
+    color: white;
+    background: orange;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+article .containerAddProduct button:hover {
+    background-color: rgb(255, 182, 98);
+}

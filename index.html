@@ -8,6 +8,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 
   <title>sneakers</title>
 
@@ -37,7 +38,11 @@
 
       <div>
 
-        <img src="images/icon-cart.svg" alt="#">
+
+
+        <div id="navCartImg"><img src="images/icon-cart.svg" alt="#">
+          <div class="navCartInfo">Your cart is empty.</div>
+        </div>
         <img src="images/image-avatar.png" alt="#">
 
       </div>
@@ -50,14 +55,14 @@
 
       <div class="containerProductImg">
 
-        <img src="images/image-product-1.jpg" alt="">
+        <div id="currentPic"><img src="images/image-product-1.jpg" alt=""></div>
 
         <div class="imageSelect">
 
-          <img src="images/image-product-1-thumbnail.jpg" alt="">
-          <img src="images/image-product-2-thumbnail.jpg" alt="">
-          <img src="images/image-product-3-thumbnail.jpg" alt="">
-          <img src="images/image-product-4-thumbnail.jpg" alt="">
+          <img onclick="showThisPic(0)" src="images/image-product-1-thumbnail.jpg" alt="">
+          <img onclick="showThisPic(1)" src="images/image-product-2-thumbnail.jpg" alt="">
+          <img onclick="showThisPic(2)" src="images/image-product-3-thumbnail.jpg" alt="">
+          <img onclick="showThisPic(3)" src="images/image-product-4-thumbnail.jpg" alt="">
 
         </div>
 
@@ -70,11 +75,11 @@
         <p>These low-profile sneakers are your perfect casual wear companion. Featuring a
           durable rubber outer sole, they'll withstand everything the weather can offer.</p>
 
-        <div id="reduction">
+        <div id="price">
 
-          <span>$125.00</span>
-          <span>50%</span>
-          <span>$250.00</span>
+          <span id="newPrice">$</span>
+          <span id="currentReduction">%</span>
+          <span id="currentPrice">$</span>
 
         </div>
 
@@ -82,13 +87,13 @@
 
           <div id="numberProduct">
 
-            <img src="images/icon-minus.svg" alt="">
-            <span>0</span>
-            <img src="images/icon-plus.svg" alt="">
+            <span id="minus"><img src="images/icon-minus.svg" alt=""></span>
+            <span id="sum">1</span>
+            <span id="plus"><img src="images/icon-plus.svg" alt=""></span>
 
           </div>
 
-          <button><img src="images/icon-cart-copy.svg" alt="">Add to cart</button>
+          <button id="addToCart"><img src="images/icon-cart-copy.svg" alt="">Add to cart</button>
 
         </div>
 

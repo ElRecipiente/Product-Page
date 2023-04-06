@@ -36,7 +36,7 @@ function buyLess() {
 
 //Show the price in HTML, before and after reduction
 function calcCurrentPrice(currentPrice, currentReduction) {
-    return currentPrice * currentReduction / 100;
+    return currentPrice - (currentPrice * currentReduction / 100);
 }
 
 function showPrice() {

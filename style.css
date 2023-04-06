@@ -19,7 +19,12 @@ main {
 
 /* MODAL */
 div.containerModal {
-    visibility: hidden;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: grey;
+    opacity: 50%;
+    /* visibility: hidden; */
 }
 
 
@@ -31,38 +36,38 @@ nav {
     height: 10vh;
 }
 
-nav div {
+nav>div {
     width: 50%;
     height: 100%;
     display: flex;
     align-items: center;
 }
 
-nav div a {
+nav>div a {
     color: gray;
     font-size: 0.9em;
     font-weight: 500;
 }
 
-nav div p {
+nav>div p {
     height: 100%;
     display: flex;
     align-items: center;
 }
 
-nav div p:hover {
+nav>div p:hover {
     border-bottom: 3px solid orange;
 }
 
-nav div a:hover {
+nav>div a:hover {
     color: black;
 }
 
-nav div:first-child {
+nav>div:first-child {
     justify-content: space-between;
 }
 
-nav div:last-child {
+nav>div:last-child {
     justify-content: flex-end;
     gap: 2em;
 }
@@ -71,16 +76,16 @@ nav #navCartImg {
     width: 3%;
 }
 
-nav div:last-child {
+nav>div:last-child {
     cursor: pointer;
 }
 
-nav div:last-child img:last-child {
+nav>div:last-child img:last-child {
     width: 7%;
     border-radius: 50%;
 }
 
-nav div:last-child img:last-child:hover {
+nav>div:last-child img:last-child:hover {
     border: 2px solid orange;
 }
 
@@ -92,17 +97,36 @@ hr {
 /* CART INFO */
 nav #navCartImg .navCartInfo {
     display: flex;
+    flex-flow: column;
     justify-content: center;
     align-items: center;
     position: absolute;
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 200px;
     background: white;
-    box-shadow: 0 0 12px grey;
+    box-shadow: 0 0 12px rgba(238, 238, 238, 0.288);
     visibility: hidden;
     top: 10%;
     right: 10%;
     transition: 0.3s;
+    font-weight: 700;
+}
+
+nav #navCartImg .navCartInfo h2 {
+    align-self: flex-start;
+    padding: 1em;
+}
+
+nav #navCartImg .navCartInfo div {
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    border-top: 1px solid grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 nav #navCartImg:hover .navCartInfo {
@@ -141,6 +165,7 @@ article>div>div>img {
     width: 100%;
 }
 
+/* IMG SELECT MINIATURE */
 article div div.imageSelect {
     display: flex;
     justify-content: space-between;
@@ -158,6 +183,7 @@ article div div.imageSelect img:hover {
     opacity: 50%;
 }
 
+/* PRODUCT INFO & PRICE */
 article .containerProductInfo {
     display: flex;
     flex-flow: column;
@@ -170,7 +196,7 @@ article .containerProductInfo p {
 }
 
 article .containerProductInfo #price {
-    width: 40%;
+    width: 35%;
     display: flex;
     justify-content: space-between;
     flex-flow: row wrap;
@@ -201,6 +227,7 @@ article .containerProductInfo #price #currentPrice {
     font-weight: 700;
 }
 
+/* AMOUNT CHOICE */
 article .containerAddProduct div#numberProduct #plus,
 article .containerAddProduct div#numberProduct #minus {
     display: flex;
@@ -231,6 +258,7 @@ article .containerAddProduct div#numberProduct {
     height: 6vh;
 }
 
+/* ADD BUTTON */
 article .containerAddProduct button {
     display: flex;
     align-items: center;

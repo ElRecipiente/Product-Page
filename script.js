@@ -55,15 +55,36 @@ showPrice();
 let addToCart = document.getElementById('addToCart');
 
 //Swap pic on click
-let currentPic = document.getElementById('currentPic');
-
 function showThisPic(p) {
+    let currentPic = document.getElementById('currentPic');
     console.log(currentPic);
-    currentPic.innerHTML = `<img src="${article.img[p]}" alt="">`;
+    currentPic.innerHTML = `<img onclick="modalTrigger()" src="${article.img[p]}" alt="">`;
 }
 
-//modal window onclick
-function modalTrigger() {
+showThisPic(0);
 
+//modal window onclick
+function displayModalImg(p) {
+    let modal = document.querySelector('.modal');
+    modal.innerHTML = `<img src="${article.img[p]}" alt=""><div class="imageSelect">
+
+    <img onclick="displayModalImg(0)" src="images/image-product-1-thumbnail.jpg" alt="">
+    <img onclick="displayModalImg(1)" src="images/image-product-2-thumbnail.jpg" alt="">
+    <img onclick="displayModalImg(2)" src="images/image-product-3-thumbnail.jpg" alt="">
+    <img onclick="displayModalImg(3)" src="images/image-product-4-thumbnail.jpg" alt="">
+
+  </div>`;
+}
+
+displayModalImg(0);
+
+function modalTrigger() {
+    let containerModal = document.querySelector('.containerModal');
+    containerModal.classList.toggle('active');
+}
+
+//Display article in cart
+function displayCart() {
+    let cart = document.getElementById('cart');
 }
 

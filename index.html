@@ -17,7 +17,8 @@
 <body>
 
   <div class="containerModal">
-    <div class="overlay" onclick="modalTrigger()"></div>
+    <div class="modalTrigger" onclick="modalTrigger()"></div>
+    <div class="closeModal" onclick="modalTrigger()">❌</div>
     <div class="modal"></div>
   </div>
 
@@ -45,7 +46,11 @@
           <div class="navCartInfo">
 
             <h2>Cart</h2>
-            <div>Your cart is empty.</div>
+            <div id="cart">
+              <div><img src="images/image-product-1-thumbnail.jpg" alt="">
+                <p>Article sympa</p>
+              </div><button>CHECK</button>
+            </div>
 
           </div>
         </div>
@@ -99,7 +104,8 @@
 
           </div>
 
-          <button id="addToCart"><img src="images/icon-cart-copy.svg" alt="">Add to cart</button>
+          <button id="addToCart" onclick="displayCart()"><img src="images/icon-cart-copy.svg" alt="">Add to
+            cart</button>
 
         </div>
 
